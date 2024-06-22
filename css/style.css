@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #333333;
+    --primary-color: #3B4752;
     --secondary-color: rgb(35, 114, 211);
     --third-color: #A0DE37;
     --hover-color: #48B0F7;
@@ -25,84 +25,75 @@ html {
     font-style: normal;
 }
 
-.login{
- width: 100%;
- height:100vh;
- display: grid;
- place-items: center;
-}
-
-.service-img{
-    width: 200px;
+.login {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
 }
 
 
 
-
-
-.logo{
+.logo {
     width: 20rem;
     margin-bottom: 48px;
     justify-self: center;
     display: none;
 }
 
-.form-container{
+.form-container {
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
 
-.title{
-font-size: var(--font-title-h1);
-margin-bottom: 24px;
-text-align: center;
-color: var(--primary-color);
+.title {
+    font-size: var(--font-title-h1);
+    margin-bottom: 24px;
+    text-align: center;
+    color: var(--primary-color);
 }
 
-.mi-cuenta{
-font-size: var(--font-title-h2);
-font-weight: bold;
-margin-bottom: 40px;
+.mi-cuenta {
+    font-size: var(--font-title-h2);
+    font-weight: bold;
+    margin-bottom: 40px;
 
 }
 
-.subtitle{
-font-size: var(--font-title-h3);
-color: #333333be;
-text-align: center;
-margin-bottom: 30px;
+.subtitle {
+    font-size: var(--font-title-h3);
+    color: #333333be;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-form, .email-container{
+form,
+.email-container {
     display: flex;
     flex-direction: column;
     width: 300px;
 }
 
-.email-container{
+.email-container {
     display: flex;
     flex-direction: column;
 
 }
 
-
-
-
-form div{
+form div {
     display: flex;
     flex-direction: column;
 }
 
-
-
-.label{
-font-size: var(--lg);
-color: var(--primary-color);
-font-weight: bold;
-margin-bottom:4px;
+.label {
+    font-size: var(--lg);
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 4px;
 }
 
-input, .value{
+input,
+.value {
     background-color: #e7e7e7;
     border: none;
     padding: 10px;
@@ -112,7 +103,7 @@ input, .value{
     font-size: var(--lg);
 }
 
-.btn-primary{
+.btn-primary {
     background-color: var(--secondary-color);
     color: white;
     padding-left: 30px;
@@ -125,7 +116,7 @@ input, .value{
     margin-bottom: 20px;
 }
 
-.btn-secondary{
+.btn-secondary {
     background-color: white;
     color: var(--secondary-color);
     border: solid 1px var(--secondary-color);
@@ -139,55 +130,54 @@ input, .value{
     margin-bottom: 20px;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
     background-color: var(--hover-color);
     cursor: pointer;
 }
 
-::placeholder{
+::placeholder {
     color: #c2bfbf;
 }
 
-
-.fa-regular.fa-envelope{
-font-size: 8rem;
-background-color: #3333330e;
-color: var(--secondary-color);
-border-radius: 80px;
-width: 150px;
-height: 150px;
-display: flex;
-align-content: center;
-justify-content: center;
-align-items: center;
-margin-bottom: 20px;
+.fa-envelope {
+    font-size: 8rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 80px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.email-enviado{
+.email-enviado {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.resend{
+.resend {
     font-size: var(--font-title-h3);
-    color:  var(--secondary-color);
+    color: var(--secondary-color);
     text-align: center;
     text-decoration: none;
-    }
+}
 
-.input-email{
+.input-email {
     font-size: var(--font-title-h2);
     color: #33333389;
 }
 
-.input-password{
+.input-password {
     font-size: 3rem;
     display: flex;
     padding-top: 15px;
 }
 
-.btn-secondary{
+.btn-secondary {
     border: solid 1px var(--secondary-color);
     background-color: white;
     height: 50px;
@@ -200,40 +190,141 @@ margin-bottom: 20px;
     margin-top: 50px;
 }
 
-.btn-secondary:hover{
+.btn-secondary:hover {
     border: solid 1px var(--secondary-color);
     background-color: var(--secondary-color);
     color: white;
     cursor: pointer;
 }
 
+.card-container {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,240px);
+    gap: 30px;
+    place-content: center;
+}
 
-@media(max-width: 640px){
-.logo {
-    display: block;
-    margin-bottom: 150px;
+.resumen-servicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.valor-servicio {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-img {
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.precios {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nombre-servicio {
+    font-size: 1.4rem;
+    color: rgba(149, 148, 148, 0.663);
+}
+
+.cart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-color);
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+}
+
+.cart-container:hover {
+    background: var(--hover-color);
+    cursor: pointer;
+}
+
+
+.fa-cart-plus {
+    font-size: 2.5rem;
+    color: white;
+}
+
+@media(max-width: 640px) {
+    .logo {
+        display: block;
+        margin-bottom: 150px;
     }
 
-.form-container{
-    height: 100%;
-}
+    .form-container {
+        height: 100%;
+    }
 
-.form{
-    height: 100%;
-    justify-content: space-between;
-}
+    .form {
+        height: 100%;
+        justify-content: space-between;
+    }
 
-.email-container{
-    height: 100%;
-    justify-content: space-between;
-}
+    .email-container {
+        height: 100%;
+        justify-content: space-between;
+    }
 
-.btn-primary{
-    margin-bottom: 50px;
-}
+    .btn-primary {
+        margin-bottom: 50px;
+    }
 
-.sign-button, .login-button, .btn-secondary {
-    margin-bottom: 50px;
-}
+    .sign-button,
+    .login-button,
+    .btn-secondary {
+        margin-bottom: 50px;
+    }
+
+    .card-container {
+
+        grid-template-columns: repeat(auto-fill,120px);
+        gap: 30px;
+     
+    }
+
+    .service-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        object-fit: cover;
+    }
+
+    .nombre-servicio {
+        font-size: 1rem;
+        color: rgba(149, 148, 148, 0.663);
+    }
+
+    .fa-cart-plus {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+
+    .cart-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--secondary-color);
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+    }
+
+    .precios {
+        font-size: 1.3rem;
+    }
+       
 
 }
