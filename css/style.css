@@ -32,6 +32,14 @@ html {
  place-items: center;
 }
 
+.service-img{
+    width: 200px;
+}
+
+
+
+
+
 .logo{
     width: 20rem;
     margin-bottom: 48px;
@@ -42,7 +50,6 @@ html {
 .form-container{
     display: grid;
     grid-template-rows: auto 1fr auto;
-    width: 300px;
 }
 
 .title{
@@ -50,6 +57,12 @@ font-size: var(--font-title-h1);
 margin-bottom: 24px;
 text-align: center;
 color: var(--primary-color);
+}
+
+.mi-cuenta{
+font-size: var(--font-title-h2);
+font-weight: bold;
+margin-bottom: 40px;
 
 }
 
@@ -60,10 +73,27 @@ text-align: center;
 margin-bottom: 30px;
 }
 
-form{
+form, .email-container{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.email-container{
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+
+form div{
     display: flex;
     flex-direction: column;
 }
+
+
 
 .label{
 font-size: var(--lg);
@@ -72,27 +102,138 @@ font-weight: bold;
 margin-bottom:4px;
 }
 
-input{
+input, .value{
     background-color: #e7e7e7;
     border: none;
     padding: 10px;
-    margin-bottom: 8px;
+    margin: 5px 0 10px 0;
     border-radius: 8px;
     height: 36px;
     font-size: var(--lg);
 }
+
 .btn-primary{
     background-color: var(--secondary-color);
     color: white;
     padding-left: 30px;
     padding-right: 30px;
     margin-top: 24px;
-    height: 42px;
+    height: 50px;
+    font-size: var(--font-title-h2);
+    width: 100%;
     font-weight: bold;
+    margin-bottom: 20px;
 }
+
+.btn-secondary{
+    background-color: white;
+    color: var(--secondary-color);
+    border: solid 1px var(--secondary-color);
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 24px;
+    height: 50px;
+    font-size: var(--font-title-h2);
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-primary:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+
+::placeholder{
+    color: #c2bfbf;
+}
+
+
+.fa-regular.fa-envelope{
+font-size: 8rem;
+background-color: #3333330e;
+color: var(--secondary-color);
+border-radius: 80px;
+width: 150px;
+height: 150px;
+display: flex;
+align-content: center;
+justify-content: center;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.email-enviado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resend{
+    font-size: var(--font-title-h3);
+    color:  var(--secondary-color);
+    text-align: center;
+    text-decoration: none;
+    }
+
+.input-email{
+    font-size: var(--font-title-h2);
+    color: #33333389;
+}
+
+.input-password{
+    font-size: 3rem;
+    display: flex;
+    padding-top: 15px;
+}
+
+.btn-secondary{
+    border: solid 1px var(--secondary-color);
+    background-color: white;
+    height: 50px;
+    font-size: var(--font-title-h2);
+    color: var(--secondary-color);
+    font-weight: bold;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.btn-secondary:hover{
+    border: solid 1px var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+}
+
 
 @media(max-width: 640px){
 .logo {
     display: block;
+    margin-bottom: 150px;
     }
+
+.form-container{
+    height: 100%;
+}
+
+.form{
+    height: 100%;
+    justify-content: space-between;
+}
+
+.email-container{
+    height: 100%;
+    justify-content: space-between;
+}
+
+.btn-primary{
+    margin-bottom: 50px;
+}
+
+.sign-button, .login-button, .btn-secondary {
+    margin-bottom: 50px;
+}
+
 }
