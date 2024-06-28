@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor de Reglas de Transición y Resumen</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .section { margin-bottom: 20px; border: 1px solid #ddd; padding: 15px; }
+        .condition { margin-bottom: 10px; }
+        select, input { margin: 5px; padding: 5px; }
+        button { padding: 5px 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        .action { margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Constructor de Reglas de Transición y Resumen</h1>
+        
+        <div class="section">
+            <h2>Crear Nueva Regla</h2>
+            <div id="conditions">
+                <div class="condition">
+                    <select name="field">
+                        <option value="">Seleccionar campo</option>
+                        <option value="destino">Destino</option>
+                        <option value="monto">Monto Total</option>
+                        <option value="duracion">Duración (días)</option>
+                        <option value="aprobacion_jefe">Aprobación Jefe Directo</option>
+                        <option value="fecha_viaje">Fecha de Viaje</option>
+                    </select>
+                    <select name="operator">
+                        <option value="">Seleccionar operador</option>
+                        <option value="eq">Es igual a</option>
+                        <option value="neq">No es igual a</option>
+                        <option value="gt">Mayor que</option>
+                        <option value="gte">Mayor o igual que</option>
+                        <option value="lt">Menor que</option>
+                        <option value="lte">Menor o igual que</option>
+                        <option value="contains">Contiene</option>
+                        <option value="starts">Comienza con</option>
+                        <option value="ends">Termina con</option>
+                    </select>
+                    <input type="text" placeholder="Valor">
+                    <select name="logical">
+                        <option value="and">Y</option>
+                        <option value="or">O</option>
+                    </select>
+                </div>
+            </div>
+            <button onclick="addCondition()">Agregar Condición</button>
+            
+            <div class="action">
+                <h3>Acción</h3>
+                <select name="action">
+                    <option value="">Seleccionar acción</option>
+                    <option value="aprobar">Aprobar automáticamente</option>
+                    <option value="rechazar">Rechazar automáticamente</option>
+                    <option value="enviar_finanzas">Enviar a Finanzas</option>
+                    <option value="enviar_gerencia">Enviar a Gerencia</option>
+                    <option value="solicitar_revision">Solicitar revisión adicional</option>
+                </select>
+            </div>
+            
+            <button onclick="guardarRegla()">Guardar Regla</button>
+        </div>
+        
+        <div class="section">
+            <h2>Resumen de Reglas Existentes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Condiciones</th>
+                        <th>Acción</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            Destino es igual a "Internacional" Y<br>
+                            Monto Total mayor que 5000 Y<br>
+                            Duración (días) mayor o igual que 7 Y<br>
+                            Aprobación Jefe Directo es igual a "Aprobado" Y<br>
+                            Fecha de Viaje es posterior a Fecha actual + 30 días
+                        </td>
+                        <td>Enviar a Finanzas</td>
+                        <td>
+                            <button onclick="editarRegla(1)">Editar</button>
+                            <button onclick="eliminarRegla(1)">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            Destino es igual a "Nacional" Y<br>
+                            Monto Total menor o igual que 1000 Y<br>
+                            Aprobación Jefe Directo es igual a "Aprobado"
+                        </td>
+                        <td>Aprobar automáticamente</td>
+                        <td>
+                            <button onclick="editarRegla(2)">Editar</button>
+                            <button onclick="eliminarRegla(2)">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function addCondition() {
+            // Aquí iría el código para agregar dinámicamente una nueva condición
+            console.log("Agregar nueva condición");
+        }
+
+        function guardarRegla() {
+            // Aquí iría el código para guardar la regla
+            console.log("Guardar regla");
+        }
+
+        function editarRegla(id) {
+            // Aquí iría el código para editar una regla existente
+            console.log("Editar regla", id);
+        }
+
+        function eliminarRegla(id) {
+            // Aquí iría el código para eliminar una regla existente
+            console.log("Eliminar regla", id);
+        }
+    </script>
+</body>
+</html>
