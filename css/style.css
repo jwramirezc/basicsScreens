@@ -144,9 +144,10 @@ input,
 }
 
 .fa-envelope {
+    text-align: center;
     font-size: 8rem;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: white;
     border-radius: 80px;
     width: 150px;
     height: 150px;
@@ -255,7 +256,7 @@ input,
 }
 
 .fa-cart-plus {
-    font-size: 2.5rem;
+    font-size: 1rem;
     color: white;
 }
 
@@ -269,6 +270,9 @@ input,
     background-color: white;
     border: none;
     border-radius: 5px;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
     box-shadow: -2px 2px 9px 2px rgba(102, 102, 102, 0.499);
     -webkit-box-shadow: -2px 2px 9px 2px rgba(102, 102, 102, 0.499);
     -moz-box-shadow: -2px 2px 9px 2px rgba(102, 102, 102, 0.499);
@@ -317,7 +321,6 @@ input,
 
 .movil-menu-first {
     text-decoration: none;
-    margin-bottom: 60px;
     margin-top: 50px;
     font-weight: bold;
     font-size: var(--font-title-h3);
@@ -332,6 +335,13 @@ input,
 .movil-menu-first li {
     margin: 30px;
     list-style: none;
+}
+
+.menu-aside-movil-first{
+position: absolute;
+right: 0;
+height: 100vh;
+width: 360px;
 }
 
 .movil-menu-second {
@@ -639,8 +649,8 @@ color: white;
 
 .fa-cart-plus{
     margin: 10px;
-    font-size: 2.5rem;
-    color: var(--secondary-color);
+    font-size: 2rem;
+    /* color: var(--secondary-color); */
     margin-left: 7px;
 }
 
@@ -730,10 +740,10 @@ color: white;
         color: rgba(149, 148, 148, 0.663);
     }
 
-    .fa-cart-plus {
+     .fa-cart-plus {
         font-size: 1.5rem;
         color: white;
-    }
+    } 
 
     .cart-container {
         display: flex;
